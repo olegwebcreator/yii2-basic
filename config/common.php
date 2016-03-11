@@ -12,6 +12,8 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => [
         'log',
+        'app\modules\admin\Bootstrap',
+        'app\modules\main\Bootstrap',
         'app\modules\user\Bootstrap',
     ],
     'modules' => [

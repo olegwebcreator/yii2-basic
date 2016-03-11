@@ -1,10 +1,9 @@
 <?php
 
-namespace app\modules\user\models\forms;
+namespace app\models;
 
 use Yii;
 use yii\base\Model;
-use app\modules\user\models\User;
 
 /**
  * LoginForm is the model behind the login form.
@@ -32,33 +31,25 @@ class LoginForm extends Model
             ['password', 'validatePassword'],
         ];
     }
-	public function attributeLabels()
-    {
-        return [
-            'username' => Yii::t('app', 'USER_USERNAME'),
-            'password' => Yii::t('app', 'USER_PASSWORD'),
-            'rememberMe' => Yii::t('app', 'USER_REMEMBER_ME'),
-        ];
-    }
+
     /**
-     * Validates the username and password.
+     * Validates the password.
      * This method serves as the inline validation for password.
+     *
+     * @param string $attribute the attribute currently being validated
+     * @param array $params the additional name-value pairs given in the rule
      */
-    public function validatePassword()
+    public function validatePassword($attribute, $params)
     {
         if (!$this->hasErrors()) {
             $user = $this->getUser();
- 
+
             if (!$user || !$user->validatePassword($this->password)) {
-                $this->addError('password', Yii::t('app', 'ERROR_WRONG_USERNAME_OR_PASSWORD'));
-            } elseif ($user && $user->status == User::STATUS_BLOCKED) {
-                $this->addError('username', Yii::t('app', 'ERROR_PROFILE_BLOCKED'));
-            } elseif ($user && $user->status == User::STATUS_WAIT) {
-                $this->addError('username', Yii::t('app', 'ERROR_PROFILE_NOT_CONFIRMED'));
+                $this->addError($attribute, 'Incorrect username or password.');
             }
         }
     }
- 
+
     /**
      * Logs in a user using the provided username and password.
      * @return boolean whether the user is logged in successfully
@@ -67,11 +58,10 @@ class LoginForm extends Model
     {
         if ($this->validate()) {
             return Yii::$app->user->login($this->getUser(), $this->rememberMe ? 3600*24*30 : 0);
-        } else {
-            return false;
         }
+        return false;
     }
- 
+
     /**
      * Finds user by [[username]]
      *
@@ -82,7 +72,7 @@ class LoginForm extends Model
         if ($this->_user === false) {
             $this->_user = User::findByUsername($this->username);
         }
- 
+
         return $this->_user;
     }
 }
