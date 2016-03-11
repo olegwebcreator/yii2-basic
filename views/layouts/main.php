@@ -5,6 +5,7 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 <<<<<<< HEAD
+<<<<<<< HEAD
 use app\assets\AppAsset;
 
 AppAsset::register($this);
@@ -75,6 +76,8 @@ AppAsset::register($this);
 </html>
 <?php $this->endPage() ?>
 =======
+=======
+>>>>>>> test
  
 /* @var $this \yii\web\View */
 /* @var $content string */
@@ -126,5 +129,9 @@ echo Nav::widget([
     <?= $content ?>
 </div>
  
+<<<<<<< HEAD
 <?php $this->endContent(); ?>
 >>>>>>> 54911c318c432cd25805da525e824d12939534f5
+=======
+<?php $this->endContent(); ?>
+>>>>>>> test
