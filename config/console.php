@@ -8,5 +8,9 @@ return [
     'controllerNamespace' => 'app\commands',
     'modules' => [
         'gii' => 'yii\gii\Module',
+        'user' => [
+            'class' => 'app\modules\user\Module',
+            'controllerNamespace' => 'app\modules\user\controllers\console',
+        ],
     ],
 ];

@@ -1,8 +1,11 @@
 <?php
-
 /* @var $this yii\web\View */
+<<<<<<< HEAD:views/site/index.php
 
 $this->title = 'My Yii Application';
+=======
+$this->title = Yii::$app->name;
+>>>>>>> 54911c318c432cd25805da525e824d12939534f5:modules/main/views/default/index.php
 ?>
 <div class="site-index">
 
