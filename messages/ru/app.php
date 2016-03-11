@@ -12,6 +12,7 @@ return [
     'BUTTON_SAVE' => 'Сохранить',
     'BUTTON_UPDATE' => 'Редактировать',
     'BUTTON_DELETE' => 'Удалить',
+    'BUTTON_CREATE' => 'Обновить',
 
 	'TITLE_CONTACT' => 'Обратная связь',
     'HELLO {username}' => 'Здравствуйте, {username}!',
@@ -29,5 +30,7 @@ return [
     'TITLE_PASSWORD_CHANGE' => 'Смена пароля',
     'USER_CURRENT_PASSWORD' => 'Текущий пароль',
     'USER_NEW_PASSWORD' => 'Новый пароль',
-    'USER_REPEAT_PASSWORD' => 'Повторите пароль'
+    'USER_REPEAT_PASSWORD' => 'Повторите пароль',
+    'ADMIN_USERS' => 'Пользователи',
+    'ADMIN' => 'Настройки пользователей',
 ];
