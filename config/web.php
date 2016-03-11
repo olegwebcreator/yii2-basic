@@ -3,6 +3,27 @@ $config = [
     'id' => 'app',
     'language'=>'ru-RU',
     'defaultRoute' => 'main/default/index',
+    'modules' => [
+        'admin' => [
+	        'class' => 'app\modules\admin\Module',
+	        'layout' => '@app/views/layouts/admin',
+	        'modules' => [
+	            'users' => [
+	                'class' => 'app\modules\user\Module',
+	                'controllerNamespace' => 'app\modules\user\controllers\backend',
+	                'viewPath' => '@app/modules/user/views/backend',
+	            ],
+	        ]
+	    ],
+        'main' => [
+            'class' => 'app\modules\main\Module',
+        ],
+        'user' => [
+            'class' => 'app\modules\user\Module',
+            'controllerNamespace' => 'app\modules\user\controllers\frontend',
+            'viewPath' => '@app/modules/user/views/frontend',
+        ],    
+    ],    
     'components' => [
         'user' => [
             'identityClass' => 'app\modules\user\models\User',

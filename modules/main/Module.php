@@ -2,23 +2,14 @@
 
 namespace app\modules\main;
 
-/**
- * main module definition class
- */
+use Yii;
+
 class Module extends \yii\base\Module
 {
-    /**
-     * @inheritdoc
-     */
     public $controllerNamespace = 'app\modules\main\controllers';
 
-    /**
-     * @inheritdoc
-     */
-    public function init()
+    public static function t($category, $message, $params = [], $language = null)
     {
-        parent::init();
-
-        // custom initialization code goes here
+        return Yii::t('modules/main/' . $category, $message, $params, $language);
     }
 }
