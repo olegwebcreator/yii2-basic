@@ -3,9 +3,12 @@
 <<<<<<< HEAD:views/site/index.php
 
 $this->title = 'My Yii Application';
+<<<<<<< HEAD:views/site/index.php
 =======
 $this->title = Yii::$app->name;
 >>>>>>> 54911c318c432cd25805da525e824d12939534f5:modules/main/views/default/index.php
+=======
+>>>>>>> parent of 1c9f20f... i don't understand:views/site/index.php
 ?>
 <div class="site-index">
 
