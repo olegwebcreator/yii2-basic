@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace app\commands;
+namespace app\modules\user\commands;
  
 use app\modules\user\models\User;
 use yii\base\Model;

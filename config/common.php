@@ -10,13 +10,17 @@ $params = ArrayHelper::merge(
 return [
 	'name' => 'Seo Service',
     'basePath' => dirname(__DIR__),
-    'bootstrap' => ['log'],
+    'bootstrap' => [
+        'log',
+        'app\modules\user\Bootstrap',
+    ],
     'modules' => [
         'main' => [
             'class' => 'app\modules\main\Module',
         ],
         'user' => [
             'class' => 'app\modules\user\Module',
+            'passwordResetTokenExpire' => 3600,
         ],
         'admin' => [
             'class' => 'app\modules\admin\Module',
