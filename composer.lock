@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1106380d95cadfccabc8f46a89ebb9e8",
-    "content-hash": "06869dda4dadfad3a121ba18baa7d18c",
+    "hash": "f9d2ead762b62bd894c8b7cf14e663e5",
+    "content-hash": "d31f0c424329b742bb7275bc8a93f173",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -55,6 +55,39 @@
                 "responsive",
                 "web"
             ]
+        },
+        {
+            "name": "bower-asset/html5shiv",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aFarkas/html5shiv.git",
+                "reference": "a3c7567c5f7055f9b76230bbbc79967d0b9f7003"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aFarkas/html5shiv/zipball/a3c7567c5f7055f9b76230bbbc79967d0b9f7003",
+                "reference": "a3c7567c5f7055f9b76230bbbc79967d0b9f7003",
+                "shasum": ""
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": [
+                    "dist/html5shiv.js"
+                ],
+                "bower-asset-ignore": [
+                    "**/.*",
+                    "composer.json",
+                    "test",
+                    "build",
+                    "src",
+                    "build.xml"
+                ],
+                "branch-alias": {
+                    "dev-master": "3.7.3-dev"
+                }
+            },
+            "time": "2016-02-09 20:38:07"
         },
         {
             "name": "bower-asset/jquery",
@@ -173,6 +206,34 @@
                     "package.json"
                 ]
             }
+        },
+        {
+            "name": "bower-asset/respond",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/scottjehl/Respond.git",
+                "reference": "1c8ce14b10cf636ed72a9e0ccffedb71143e2e69"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/scottjehl/Respond/zipball/1c8ce14b10cf636ed72a9e0ccffedb71143e2e69",
+                "reference": "1c8ce14b10cf636ed72a9e0ccffedb71143e2e69",
+                "shasum": ""
+            },
+            "type": "bower-asset-library",
+            "extra": {
+                "bower-asset-main": "dest/respond.src.js",
+                "bower-asset-ignore": [
+                    "**/.*",
+                    "test"
+                ],
+                "branch-alias": {
+                    "dev-master": "1.4.2-dev"
+                }
+            },
+            "description": "Fast and lightweight polyfill for min/max-width CSS3 Media Queries (for IE 6-8, and more)",
+            "time": "2015-10-26 19:02:13"
         },
         {
             "name": "bower-asset/yii2-pjax",
@@ -375,7 +436,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/b5fa1f8fb1559ea6765b9b428921a27310d24792",
+                "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/6798f7708b36c485cd45c78e22ab5126c10fbf28",
                 "reference": "b5fa1f8fb1559ea6765b9b428921a27310d24792",
                 "shasum": ""
             },
