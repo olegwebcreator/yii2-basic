@@ -3,18 +3,13 @@
 namespace app\modules\admin;
 
 use yii\filters\AccessControl;
+use Yii;
 
-/**
- * admin module definition class
- */
 class Module extends \yii\base\Module
 {
-    /**
-     * @inheritdoc
-     */
     public $controllerNamespace = 'app\modules\admin\controllers';
 
-	public function behaviors()
+    public function behaviors()
     {
         return [
             'access' => [
@@ -29,13 +24,8 @@ class Module extends \yii\base\Module
         ];
     }
 
-    /**
-     * @inheritdoc
-     */
-    public function init()
+    public static function t($category, $message, $params = [], $language = null)
     {
-        parent::init();
-
-        // custom initialization code goes here
+        return Yii::t('modules/admin/' . $category, $message, $params, $language);
     }
 }

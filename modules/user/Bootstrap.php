@@ -1,10 +1,9 @@
 <?php
 
 namespace app\modules\user;
- 
+
 use yii\base\BootstrapInterface;
-use Yii;
- 
+
 class Bootstrap implements BootstrapInterface
 {
     public function bootstrap($app)

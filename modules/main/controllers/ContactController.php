@@ -1,12 +1,11 @@
 <?php
 
 namespace app\modules\main\controllers;
-use app\modules\main\models\ContactForm;
+
+use app\modules\main\models\form\ContactForm;
 use yii\web\Controller;
 use Yii;
-/**
- * Default controller for the `main` module
- */
+
 class ContactController extends Controller
 {
     public function actions()
@@ -18,7 +17,7 @@ class ContactController extends Controller
             ],
         ];
     }
- 
+
     public function actionIndex()
     {
         $model = new ContactForm();
